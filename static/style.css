@@ -41,13 +41,13 @@ html,
 button,
 input,
 select,
-
 body {
     margin: 0;
 }
 
 a {
     background: transparent;
+    word-break: break-word;
 }
 
 a:focus {
