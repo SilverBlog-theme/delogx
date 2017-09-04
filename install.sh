@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-if [ $(basename `pwd`) != "templates" ];then
+if [ $(basename `pwd`) != "templates" ]; then
     echo "[Error] Please do this in the templates directory!"
     exit
 fi
