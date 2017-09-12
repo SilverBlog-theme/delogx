@@ -5,8 +5,13 @@
         <nav class="nav-menu">
             <ul>
                 {% for item in menu_list %}
+                    {% if "absolute" in item %}
+                        {% set url = item.absolute %}
+                    {% else %}
+                        {% set url = "/"+item.name %}
+                    {% endif %}
                     <li>
-                        <a href="{% if "absolute" in item and item.absolute %}{{ item.name }}{% else %}/{{ item.name }}{% if static %}.html{% endif %}{% endif %}">{{ item.title }}</a>
+                        <a href="{{url}}{% if static %}.html{% endif %}{% endif %}">{{ item.title }}</a>
                     </li>|
                 {% endfor %}
                 <li><a href="/rss">订阅</a></li>
