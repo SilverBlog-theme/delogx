@@ -4,7 +4,7 @@ if [ $(basename `pwd`) != "templates" ]; then
     exit
 fi
 if [ ! -d "delogx" ]; then
-    git clone https://github.com/SilverBlogTheme/delogx.git
+    git clone https://github.com/SilverBlogTheme/delogx.git --depth 1
     cd delogx
 fi
 ln -s $(pwd)/static ../static/delogx
