@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-if [ $(basename `pwd`) != "templates" ]; then
+templates_name = "delogx"
+if [ $(basename `pwd`) != "templates" ];then
     echo "[Error] Please do this in the templates directory!"
     exit
 fi
-if [ ! -d "delogx" ]; then
-    git clone https://github.com/SilverBlogTheme/delogx.git --depth 1
+if [ ! -d ${templates_name} ]; then
+    git clone https://github.com/SilverBlogTeam/${templates_name}.git
 fi
-ln -sv ../delogx/static ./static/delogx
-cd delogx
+ln -sv ../${templates_name}/static ./static/${templates_name}
+cd ${templates_name}
 if [ -f "config.json" ]; then
     cp config.example.json config.json
     vim config.json
