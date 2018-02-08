@@ -5,9 +5,9 @@ if [ $(basename `pwd`) != "templates" ]; then
 fi
 if [ ! -d "delogx" ]; then
     git clone https://github.com/SilverBlogTheme/delogx.git --depth 1
-    cd delogx
 fi
-ln -s $(pwd)/static ../static/delogx
+ln -sv ../delogx/static ./delogx/clearision
+cd delogx
 if [ -f "config.json" ]; then
     cp config.example.json config.json
     vim config.json
