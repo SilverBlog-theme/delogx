@@ -6,7 +6,7 @@ fi
 if [ ! -d "delogx" ]; then
     git clone https://github.com/SilverBlogTheme/delogx.git --depth 1
 fi
-ln -sv ../delogx/static ./delogx/clearision
+ln -sv ../delogx/static ./static/delogx
 cd delogx
 if [ -f "config.json" ]; then
     cp config.example.json config.json
