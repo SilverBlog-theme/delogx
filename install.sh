@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -o errexit
 templates_name="delogx"
 
 if [ $(basename `pwd`) != "templates" ];then
